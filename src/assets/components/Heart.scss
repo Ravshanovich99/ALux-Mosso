@@ -1,0 +1,49 @@
+.heart-block {
+    position: absolute;
+    top: 180px;
+    right: 133px;
+    display: none;
+
+    @media (max-width: 1500px) {
+        top: 100px;
+    }
+
+    @include xl{
+        display: none;
+    }
+    
+    .amount-likes {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        color: #000;
+        background-color: #7E6745;
+        border-radius: 50%;
+        @include df-center;
+        left: 40px;
+        top: -10px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        background: #000;
+        border-radius: 50%;
+        border: none;
+        @include df-center;
+
+        .fa-heart {
+            font-size: rem(28);
+            color: #7E6745;
+            cursor: pointer;
+        }
+        
+        .fa-heart.active{
+            color: #F5AF30;
+        }
+    }
+}

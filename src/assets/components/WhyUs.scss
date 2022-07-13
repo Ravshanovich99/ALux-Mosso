@@ -1,0 +1,163 @@
+.why-us {
+    width: 100%;
+    transform: translateY(680px);
+
+    @include lg{
+        transform: translateY(780px);
+    }
+
+    .container {
+        .why-us-section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(65, 55);
+            text-align: center;
+            color: #151515;
+            text-align: center;
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .why-us-cards {
+            padding-top: rem(50);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            @include sm{
+                @include df-center
+            }
+
+
+
+            .why-us-card {
+                width: 25%;
+                position: relative;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                @include lg {
+                    @include df-center;
+                }
+
+                @include md {
+                    width: 50%;
+                    padding-bottom: 180px;
+                    @include df-between;
+                }
+
+                @include sm {
+                    width: 80%;
+                    padding-bottom: 100px;
+                    @include df-between;
+                }
+
+                .why-us-card-background {
+                    width: 100%;
+                    position: absolute;
+                    z-index: -1;
+
+                    @include sm {
+                        height: 80%;
+                    }
+                }
+
+                img:nth-child(2) {
+                    width: 28%;
+                    padding-top: 60px;
+
+                    @include lg {
+                        @include df-center;
+                    }
+
+                    @include md {
+                        padding-top: 80px;
+                    }
+
+                    @include sm {
+                        padding-top: 30px;
+                        width: 20%;
+                    }
+                }
+
+                .why-us-card-svg-0 {
+                    padding-bottom: rem(40);
+
+                    @include lg {
+                        padding-bottom: 0px;
+                    }
+                }
+
+                .why-us-card-svg-1 {
+
+                    @include lg {
+                        padding-top: 0px !important;
+                    }
+
+                    @include md {
+                        padding-top: 60px !important;
+                    }
+                }
+
+                .why-us-info {
+                    h3 {
+                        font-family: 'Playfair Display';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: rem(22);
+                        line-height: 273%;
+                        text-align: center;
+                        color: #FFFFFF;
+                        width: 90%;
+                        margin: 0 auto;
+
+                        @include lg {
+                            width: 80%;
+                            font-size: rem(20);
+                            line-height: lh(30, 20);
+                        }
+
+                    }
+
+                    p {
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: rem(16);
+                        line-height: 162%;
+                        text-align: center;
+                        color: #FFFFFF;
+                        opacity: 0.75;
+                        width: 80%;
+                        margin: 0 auto;
+
+                        @include lg {
+                            width: 80%;
+                            font-size: rem(14);
+                            line-height: lh(30, 20);
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}

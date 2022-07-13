@@ -1,0 +1,1668 @@
+.filter {
+    width: 100%;
+    background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+    box-shadow: 0px 8px 30px rgba(19, 21, 22, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: rem(22) rem(40) rem(56);
+    margin: 0 auto;
+    transform: translateY(-100px);
+
+    .filter-btns {
+        display: flex;
+        gap: 15px;
+        @include md{
+            flex-direction: column;
+        }
+
+        .filter-btn {
+            @include md {
+                width: 100%;
+                gap: rem(7);
+                flex-wrap: wrap;
+            }
+        }
+
+        button {
+            width: auto;
+            background: #000;
+            box-shadow: none;
+            color: #fff;
+            border: 1px solid transparent;
+            padding: rem(12) rem(30);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(16);
+            line-height: lh(19, 16);
+            border-radius: 3px;
+
+            &.active {
+                border: 1px solid #FFBF31;
+            }
+
+            @include md {
+                width: 100%;
+
+                padding: rem(15);
+            }
+        }
+
+        button:nth-child(3) {
+            @include df-center;
+        }
+    }
+
+    .object-checkboxes {
+        display: flex;
+        padding-top: rem(30);
+        gap: rem(50);
+
+        @include md {
+            @include df-center;
+        }
+
+        @include sm {
+            flex-wrap: wrap;
+            padding-top: rem(20);
+            gap: rem(5);
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+        @media (max-width: 440px) {
+            flex-direction: column;
+
+        }
+
+
+        label {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(16);
+            line-height: lh(17, 14);
+            color: #FFFFFF;
+
+            @include sm {
+                font-size: rem(14);
+            }
+        }
+
+        .obj-checkbox {
+            display: flex;
+            gap: 20px;
+            height: 40px;
+
+            @include sm {
+                gap: 12px;
+            }
+
+
+            input {
+                opacity: 0;
+            }
+
+            .checkbox_style {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                background-color: transparent;
+                border-radius: 3px;
+                border: 1px solid #FFBF31;
+
+                @include sm {
+                    height: 16px;
+                    width: 16px;
+                }
+
+            }
+
+            .checkbox_style:after {
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                content: "";
+                width: 9px;
+                height: 16px;
+                border: solid white;
+                border-width: 0px 4px 4px 0px;
+                transform: rotate(45deg);
+                visibility: hidden;
+
+                @include sm {
+                    top: 0;
+                    width: 6px;
+                    height: 12px;
+                    border-width: 0px 2px 2px 0px;
+                }
+            }
+
+            input:checked~.checkbox_style:after {
+                visibility: visible;
+            }
+        }
+    }
+
+    .filter-selection {
+        display: flex;
+        gap: rem(19);
+        padding-top: rem(37);
+
+        @include lg {
+            padding-top: rem(25);
+            flex-wrap: wrap;
+        }
+
+        @include md {
+            justify-content: space-between;
+        }
+
+        .select-object {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 20%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+            }
+
+            .type-object {
+                padding: rem(20) rem(17);
+                background: #FFFFFF;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #000;
+                position: relative;
+
+                p {
+                    @include df-between;
+
+                    i {
+                        transition: 500ms;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .types-object {
+                    padding: 10px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    display: none;
+                    flex-direction: column;
+                    gap: 15px;
+                    position: absolute;
+                    z-index: 2;
+                    height: 180px;
+                    @include sm{
+                        height: auto;
+                    }
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    p {
+                        display: flex;
+                        gap: 4px;
+
+                        label {
+                            color: #000;
+                            font-size: 16px;
+                            text-align: left;
+                            width: 90%;
+                            font-weight: 300;
+
+                            @include sm {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+            // select {
+            //     padding: rem(20) rem(17);
+            //     background: #FFFFFF;
+            //     border-radius: 3px;
+            //     font-family: 'Fira Sans';
+            //     font-style: normal;
+            //     font-weight: 400;
+            //     font-size: rem(16);
+            //     line-height: lh(19, 16);
+            //     color: #000;
+
+            //     @include md {
+            //         width: 90%;
+            //     }
+            // }
+        }
+
+        .select-city {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 20%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+            .type-city {
+                padding: rem(20) rem(17);
+                background: #FFFFFF;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #000;
+                position: relative;
+
+                p {
+                    @include df-between;
+
+                    i {
+                        transition: 500ms;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .types-city {
+                    padding-top: 20px;
+                    padding: 10px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    display: none;
+                    flex-direction: column;
+                    gap: 7px;
+                    position: absolute;
+                    z-index: 2;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    p {
+                        display: flex;
+                        gap: 4px;
+
+                        label {
+                            white-space: nowrap;
+                            color: #000;
+                            font-size: 13px;
+                            text-align: left;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .select-district {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 20%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+                padding-top: rem(10);
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+            .type-district {
+                padding: rem(20) rem(17);
+                background: #FFFFFF;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #000;
+                position: relative;
+
+                p {
+                    @include df-between;
+
+                    i {
+                        transition: 500ms;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .types-district {
+                    padding-top: 20px;
+                    padding: 10px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    display: none;
+                    flex-direction: column;
+                    gap: 7px;
+                    position: absolute;
+                    z-index: 2;
+
+                    p {
+
+                        span {
+                            color: #000;
+                        }
+                    }
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    p {
+                        display: flex;
+                        gap: 4px;
+
+                        label {
+                            white-space: nowrap;
+                            color: #000;
+                            font-size: 13px;
+                            text-align: left;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .price-start {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 10%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #fff;
+                white-space: nowrap;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+            input {
+                all: unset;
+                padding: rem(20) rem(17);
+                background: #242424;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #A8A8A8;
+
+                @include md {
+                    width: 87%;
+                }
+
+                @include sm {
+                    width: 77%;
+                }
+
+                @media (max-width: 408px) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .price-end {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 10%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #fff;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+
+            input {
+                all: unset;
+                padding: rem(20) rem(17);
+                background: #242424;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #A8A8A8;
+
+                @include md {
+                    width: 87%;
+                }
+
+                @include sm {
+                    width: 77%;
+                }
+
+                @media (max-width: 408px) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .select-id {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 10%;
+
+            @include sm {
+                flex: 1 1 140px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+                padding-top: rem(10);
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #fff;
+
+                @include md {
+                    width: 30%;
+                }
+            }
+
+            input {
+                all: unset;
+                padding: rem(20) rem(17);
+                background: #242424;
+                ;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #A8A8A8;
+
+                @include md {
+                    width: 87%;
+                }
+
+                @include sm {
+                    width: 77%;
+                }
+
+                @media (max-width: 408px) {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    .mid {
+        display: flex;
+        gap: rem(19);
+        padding-top: rem(37);
+        position: relative;
+
+        @include lg {
+            flex-wrap: wrap;
+        }
+
+        @include md {
+            @include df-center;
+            gap: rem(20);
+
+        }
+
+        .city {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 30%;
+
+            @include sm {
+                flex: 1 1 200px;
+            }
+
+            @include md {
+                width: 47%;
+                justify-content: space-between;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+
+                @include md {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+            }
+
+            select {
+                padding: rem(20) rem(17);
+                background: #FFFFFF;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #000;
+
+                @include md {
+                    width: 90%;
+                }
+            }
+        }
+
+        .structures {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+            width: 30%;
+
+
+            @include sm {
+                flex: 1 1 500px;
+                width: 90%;
+            }
+
+            @include md {
+                width: 100%;
+            }
+
+            p {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+
+                @include md {
+                    width: 30%;
+                    white-space: nowrap;
+                }
+            }
+
+            .type-structure {
+                padding: rem(20) rem(17);
+                background: #FFFFFF;
+                border-radius: 3px;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #000;
+                position: relative;
+
+                div {
+                    width: 100%;
+                    color: #000;
+                    @include df-between;
+
+                    i {
+                        transition: 500ms;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .types-structure {
+                    padding: 10px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    display: none;
+                    flex-direction: column;
+                    gap: 7px;
+                    position: absolute;
+                    z-index: 2;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 200px;
+
+                    &.active {
+                        display: flex;
+                        align-items: flex-start;
+                    }
+
+                    p {
+                        display: flex;
+                        gap: 4px;
+
+                        label {
+                            white-space: nowrap;
+                            color: #000;
+                            font-size: 13px;
+                            text-align: left;
+                            width: 90%;
+
+                            @include sm {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // .structure-checkboxes-box {
+        //     background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+        //     border-radius: 3px;
+        //     border: 1px solid #FFBF31;
+        //     height: auto;
+        //     width: 95%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     padding: rem(42);
+        //     position: absolute;
+        //     z-index: 2;
+        //     filter: blur(0px);
+        //     transform: translate(3%, -50%) scale(0);
+        //     transition: 0.3s;
+
+        //     @media (max-width: 420px) {
+        //         width: 120%;
+        //     }
+
+        //     @include sm {
+        //         padding: rem(22);
+        //     }
+
+        //     &.active {
+        //         transform: translate(3%, -50%) scale(1);
+
+        //         @include md {
+        //             transform: translate(3%, -55%);
+        //         }
+
+        //         @media (max-width: 420px) {
+        //             transform: translate(-8%, -70%);
+        //         }
+        //     }
+
+        //     .checkboxes-box-title {
+        //         font-family: 'Fira Sans';
+        //         font-style: normal;
+        //         font-weight: 400;
+        //         font-size: 14px;
+        //         line-height: 17px;
+        //         color: #A8A8A8;
+        //         padding-bottom: rem(20);
+        //     }
+
+        //     .structure-checkboxes {
+        //         display: grid;
+        //         grid-template-columns: auto auto auto auto auto;
+
+        //         @include lg {
+        //             grid-template-columns: auto auto auto auto;
+        //         }
+
+        //         @include md {
+        //             grid-template-columns: auto auto auto;
+        //         }
+
+        //         @media (max-width: 660px) {
+        //             grid-template-columns: auto auto;
+        //         }
+
+        //         .structure-checkbox {
+        //             padding: rem(20) 0;
+        //             @include df-between;
+
+        //             @include sm {
+        //                 padding: rem(10) 0;
+        //             }
+
+        //             @media (max-width: 450px) {
+        //                 padding: rem(5) 0;
+        //             }
+
+        //             input {
+        //                 opacity: 0;
+        //             }
+
+        //             .checkbox_style {
+        //                 position: absolute;
+        //                 height: 24px;
+        //                 width: 24px;
+        //                 background-color: transparent;
+        //                 border-radius: 3px;
+        //                 border: 1px solid #FFBF31;
+
+        //                 @include sm {
+        //                     height: 16px;
+        //                     width: 16px;
+        //                 }
+        //             }
+
+        //             .checkbox_style:after {
+        //                 position: absolute;
+        //                 top: 2px;
+        //                 left: 6px;
+        //                 content: "";
+        //                 width: 9px;
+        //                 height: 16px;
+        //                 border: solid white;
+        //                 border-width: 0px 4px 4px 0px;
+        //                 transform: rotate(45deg);
+        //                 visibility: hidden;
+        //             }
+
+        //             input:checked~.checkbox_style:after {
+        //                 visibility: visible;
+        //             }
+
+        //             label {
+        //                 font-family: 'Fira Sans';
+        //                 font-style: normal;
+        //                 font-weight: 600;
+        //                 font-size: rem(14);
+        //                 line-height: lh(17, 14);
+        //                 color: #FFFFFF;
+        //                 padding-left: rem(36);
+
+        //                 @include sm {
+        //                     padding-left: rem(24);
+        //                 }
+
+        //                 @include sm {
+        //                     font-size: 12px;
+        //                 }
+        //             }
+        //         }
+
+        //     }
+
+        //     .checkboxes-box-btns {
+        //         display: flex;
+        //         width: 100%;
+        //         align-items: flex-end;
+        //         justify-content: flex-end;
+        //         padding-top: rem(48);
+        //         gap: rem(12);
+
+        //         @include sm {
+        //             width: 50%;
+        //             gap: rem(22);
+        //         }
+
+        //         button {
+        //             @include sm {
+        //                 width: 120%;
+        //             }
+        //         }
+
+        //         .cancel-btn {
+        //             button {
+        //                 @include sm {
+        //                     width: 120%;
+        //                 }
+
+        //                 background: transparent;
+        //                 box-shadow: none;
+        //                 border: 1px solid #A8A8A8;
+        //                 color: #A8A8A8;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .date-built {
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: rem(11);
+
+        //     label {
+        //         font-family: 'Fira Sans';
+        //         font-style: normal;
+        //         font-weight: 600;
+        //         font-size: rem(14);
+        //         line-height: lh(17, 14);
+        //         color: #FFFFFF;
+        //     }
+
+        //     .date-inputs {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         align-items: center;
+        //         width: 80%;
+
+        //         input {
+        //             width: 40%;
+        //             background: #242424;
+        //             border-radius: 3px;
+        //             padding: rem(20) rem(15);
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 400;
+        //             font-size: rem(16);
+        //             line-height: lh(19, 16);
+        //             color: #A8A8A8;
+        //             border: none;
+        //         }
+        //     }
+        // }
+
+        // .completion-date {
+        //     display: flex;
+        //     flex-direction: column;
+        //     padding: rem(20) 0;
+        //     gap: rem(10);
+
+        //     label {
+        //         font-family: 'Fira Sans';
+        //         font-style: normal;
+        //         font-weight: 600;
+        //         font-size: rem(14);
+        //         line-height: lh(17, 14);
+        //         color: #FFFFFF;
+        //     }
+
+        //     input {
+        //         width: 80%;
+        //         background: #242424;
+        //         border-radius: 3px;
+        //         padding: rem(20) rem(15);
+        //         font-family: 'Fira Sans';
+        //         font-style: normal;
+        //         font-weight: 400;
+        //         font-size: rem(16);
+        //         line-height: lh(19, 16);
+        //         color: #A8A8A8;
+        //         border: none;
+        //     }
+        // }
+
+        .surface {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+
+            @include md {
+                width: 100%;
+            }
+
+            @include sm {
+                flex: 1 1 200px;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+            }
+
+            .surface-inputs {
+                @include df-between;
+                width: 90%;
+
+
+                @include md {
+                    width: 100%;
+                    gap: 20px;
+                }
+
+                input {
+                    width: 40%;
+                    background: #242424;
+                    border-radius: 3px;
+                    padding: rem(20) rem(15);
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    color: #A8A8A8;
+                    border: none;
+
+                    @include md {
+                        width: 50%;
+                    }
+                }
+
+                p {
+                    width: 10%;
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #A8A8A8;
+
+                    @include md {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        .build-year {
+            display: flex;
+            flex-direction: column;
+            gap: rem(11);
+
+            @include md {
+                width: 100%;
+            }
+
+            @include sm {
+                flex: 1 1 200px;
+            }
+
+            label {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: lh(17, 14);
+                color: #FFFFFF;
+            }
+
+            .build-inputs {
+                display: flex;
+                align-items: center;
+                width: 80%;
+                gap: 20px;
+
+                @include md {
+                    width: 100%;
+                }
+
+                input {
+                    width: 45%;
+                    background: #242424;
+                    border-radius: 3px;
+                    padding: rem(20) rem(15);
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    color: #A8A8A8;
+                    border: none;
+
+                    @include md {
+                        width: 50%;
+                    }
+                }
+
+            }
+        }
+
+        // .mid-center {
+        //     width: 30%;
+        //     height: 100%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: space-between;
+        //     gap: rem(30);
+
+        //     @include md {
+        //         flex: 1 1 200px;
+        //         padding-bottom: rem(10);
+        //     }
+
+        //     .komplex {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: rem(11);
+
+        //         label {
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 600;
+        //             font-size: rem(14);
+        //             line-height: lh(17, 14);
+        //             color: #FFFFFF;
+        //         }
+
+        //         select {
+        //             background: #FFFFFF;
+        //             border-radius: 3px;
+        //             padding: rem(20) rem(17);
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 400;
+        //             font-size: rem(16);
+        //             line-height: lh(19, 16);
+        //             color: #000000;
+        //             width: 80%;
+        //         }
+        //     }
+
+        //     .floores {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: rem(11);
+
+        //         label {
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 600;
+        //             font-size: rem(14);
+        //             line-height: lh(17, 14);
+        //             color: #FFFFFF;
+        //         }
+
+        //         .floor-inputs {
+        //             display: flex;
+        //             align-items: center;
+        //             width: 80%;
+        //             gap: 20px;
+
+        //             input {
+        //                 width: 40%;
+        //                 background: #242424;
+        //                 border-radius: 3px;
+        //                 padding: rem(20) rem(15);
+        //                 font-family: 'Fira Sans';
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: rem(16);
+        //                 line-height: lh(19, 16);
+        //                 color: #A8A8A8;
+        //                 border: none;
+        //             }
+        //         }
+        //     }
+        // }
+
+        // .mid-right {
+        //     width: 30%;
+        //     height: 100%;
+        //     gap: rem(30);
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: space-between;
+
+        //     @include md {
+        //         flex: 1 1 200px;
+        //     }
+
+        //     .from-sea {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: rem(11);
+
+        //         label {
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 600;
+        //             font-size: rem(14);
+        //             line-height: lh(17, 14);
+        //             color: #FFFFFF;
+        //         }
+
+        //         .sea-inputs {
+        //             display: flex;
+        //             justify-content: space-between;
+        //             align-items: center;
+        //             width: 80%;
+
+        //             input {
+        //                 width: 40%;
+        //                 background: #242424;
+        //                 border-radius: 3px;
+        //                 padding: rem(20) rem(15);
+        //                 font-family: 'Fira Sans';
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: rem(16);
+        //                 line-height: lh(19, 16);
+        //                 color: #A8A8A8;
+        //                 border: none;
+        //             }
+
+        //             span {
+        //                 font-family: 'Fira Sans';
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: 16px;
+        //                 line-height: 19px;
+        //                 color: #A8A8A8;
+        //             }
+
+        //         }
+        //     }
+
+        //     .id {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: rem(11);
+
+        //         label {
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 600;
+        //             font-size: rem(14);
+        //             line-height: lh(17, 14);
+        //             color: #FFFFFF;
+        //         }
+
+        //         input {
+        //             width: 40%;
+        //             background: #242424;
+        //             border-radius: 3px;
+        //             padding: rem(20) rem(15);
+        //             font-family: 'Fira Sans';
+        //             font-style: normal;
+        //             font-weight: 400;
+        //             font-size: rem(16);
+        //             line-height: lh(19, 16);
+        //             color: #A8A8A8;
+        //             border: none;
+        //         }
+        //     }
+        // }
+    }
+
+    .filter-bottom {
+        padding-top: rem(69);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include md {
+            flex-direction: column;
+            padding-top: rem(39);
+        }
+
+        .filter-bottom-left {
+            display: flex;
+            gap: rem(45);
+
+            @include md {
+                padding-bottom: rem(30);
+            }
+
+
+            .filter-show {
+                display: flex;
+                gap: rem(15);
+                cursor: pointer;
+
+
+                &.active {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &:hover i {
+                    color: #7E6745;
+                }
+
+                &:hover p {
+                    color: #7E6745;
+                }
+
+
+
+                i {
+                    color: #fff;
+                    font-size: rem(18);
+                    transition: 0.5s;
+                }
+
+                p {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(16);
+                    line-height: 19px;
+                    text-decoration-line: underline;
+                    color: #fff;
+                    transition: 0.5s;
+                }
+            }
+
+            .filter-cancel {
+                display: flex;
+                gap: rem(15);
+                cursor: pointer;
+
+                i {
+                    cursor: pointer;
+                    color: #6F7478;
+                    font-size: rem(18);
+                    transition: 0.5s;
+                }
+
+                p {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(16);
+                    line-height: 19px;
+                    color: #6F7478;
+                }
+            }
+        }
+    }
+}
+
+.objects-filter-container {
+    position: relative;
+    transform: translateY(-100px);
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .objects-filter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to left top, #232323 8.75%, #000000 70.62%);
+        height: auto;
+        border-radius: 8px;
+        background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+        position: relative;
+        z-index: 1;
+        transition: 0.6s;
+
+        &.blur-active {
+            filter: blur(4px);
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+            border-radius: 8px;
+            padding: rem(16) rem(32);
+
+            @include lg {
+                padding: rem(16);
+            }
+
+            @include md {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+
+            .apartments {
+                width: 30%;
+                @include df-between;
+
+                @include md {
+                    width: 48%;
+                    flex: 1 1 200px;
+                }
+
+                @include lg {
+                    width: 35%;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+                .appartments-title {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    text-align: center;
+                    color: #FFFFFF;
+                    width: 25%;
+                }
+
+                .nums {
+                    width: 62%;
+                    border-radius: 3px;
+                    border: 1px solid #FFBF31;
+                    color: #fff;
+                    background: #000;
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include xl {
+                        width: 50%;
+                    }
+
+                    .num {
+                        width: 20%;
+                        height: 100%;
+                        background: #000;
+                        @include df-center;
+                        color: #fff;
+                        padding: rem(20);
+                        cursor: pointer;
+
+                        @include xl {
+                            padding: rem(14);
+                        }
+
+                        &.active {
+                            background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                            border-radius: 3px;
+                            color: #000;
+                        }
+                    }
+                }
+
+                .appartments-description {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    color: #FFFFFF;
+                    opacity: 0.5;
+                    width: 10%;
+                }
+            }
+
+            .money {
+                width: 30%;
+                @include df-between;
+
+                @include md {
+                    width: 48%;
+                    flex: 1 1 200px;
+                    padding: rem(20) 0;
+                    justify-content: space-between;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+                p {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    color: #FFFFFF;
+                }
+
+                input {
+                    width: 33%;
+                    background: #242424;
+                    border-radius: 3px;
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(16);
+                    line-height: lh(19, 16);
+                    color: #FFFFFF;
+                    padding: rem(20) rem(15);
+                    border: none
+                }
+            }
+
+            .checkboxes {
+                @include df-between;
+                position: relative;
+                width: 30%;
+
+                @include md {
+                    flex: 1 1 400px;
+                    justify-content: center;
+                    gap: 30px;
+                    padding-top: rem(20);
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+
+                label {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+
+                    @include lg {
+                        font-size: rem(14);
+                        padding-left: rem(10);
+                    }
+
+                    @include md {
+                        font-size: rem(16);
+                        padding-left: rem(0);
+                    }
+                }
+
+                .checkbox-1 {
+
+                    input {
+                        opacity: 0;
+                    }
+
+                    .checkbox_style {
+                        position: absolute;
+                        height: 24px;
+                        width: 24px;
+                        background-color: transparent;
+                        border-radius: 3px;
+                        border: 1px solid #FFBF31;
+                    }
+
+                    .checkbox_style:after {
+                        position: absolute;
+                        top: 2px;
+                        left: 6px;
+                        content: "";
+                        width: 9px;
+                        height: 16px;
+                        border: solid white;
+                        border-width: 0px 4px 4px 0px;
+                        transform: rotate(45deg);
+                        visibility: hidden;
+                    }
+
+                    input:checked~.checkbox_style:after {
+                        visibility: visible;
+                    }
+                }
+
+                .checkbox-2 {
+
+                    input {
+                        opacity: 0;
+                    }
+
+                    .checkbox_style {
+                        position: absolute;
+                        height: 24px;
+                        width: 24px;
+                        background-color: transparent;
+                        border-radius: 3px;
+                        border: 1px solid #FFBF31;
+                    }
+
+                    .checkbox_style:after {
+                        position: absolute;
+                        top: 2px;
+                        left: 6px;
+                        content: "";
+                        width: 9px;
+                        height: 16px;
+                        border: solid white;
+                        border-width: 0px 4px 4px 0px;
+                        transform: rotate(45deg);
+                        visibility: hidden;
+                    }
+
+                    input:checked~.checkbox_style:after {
+                        visibility: visible;
+                    }
+                }
+
+
+
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: rem(16) rem(32);
+
+            .bottom-cancel {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                color: #6F7478;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                cursor: pointer;
+
+                i {
+                    color: #6F7478;
+                    opacity: 0.3;
+                    font-size: rem(24);
+                }
+            }
+        }
+    }
+}

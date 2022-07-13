@@ -1,0 +1,542 @@
+.about {
+    position: relative;
+
+    .about-leaf-1{
+        position: absolute;
+        top: 1024px;
+        right: 198px;
+
+        @media (max-width: 1450px) {
+            display: none;
+        }
+    }
+    .header {
+        align-items: center;
+        justify-content: center;
+        // padding: 10px 0;
+
+        .nav {
+            .header-left {
+                .logo {
+                    width: 20%;
+                    height: 10%;
+
+                    @include sm {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+
+        .section-subtitle {
+            padding-top: rem(19);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: 188%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #717171;
+            text-align: left;
+
+            @include md {
+                padding-top: rem(109);
+                font-size: rem(14);
+            }
+
+            @include sm {
+                font-size: rem(12);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(65, 55);
+            text-align: center;
+            color: #151515;
+            text-align: left;
+            padding-bottom: rem(50);
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .about-main-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .about-headline {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(24);
+            line-height: 125%;
+            color: #17181C;
+            padding-top: toEm(35, 24);
+
+            @include md {
+                font-size: rem(20);
+            }
+        }
+
+        .about-description {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(18);
+            line-height: 125%;
+            color: #17181C;
+            padding-top: toEm(40, 20);
+
+            @include md {
+                font-size: rem(16);
+            }
+        }
+
+        .about-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: rem(85);
+            width: 100%;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                width: 20%;
+                justify-content: space-between;
+
+                @include md {
+                    width: 50%;
+                }
+
+                &:first-child {
+                    img {
+                        padding-top: rem(10);
+                        width: 30%;
+                    }
+                }
+
+                img {
+                    width: 25%;
+                    // padding-bottom: rem(10);
+                    height: 50px;
+
+                    @include md {
+                        width: 22%;
+                        padding-bottom: rem(12);
+                        margin: 0 auto;
+                        // padding-bottom: rem(16);
+                    }
+                }
+
+
+
+                .item-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    @include md {
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                    @include md {}
+
+                    h3 {
+                        font-family: 'Playfair Display';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(55);
+                        line-height: 100%;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        font-feature-settings: 'pnum' on, 'lnum' on;
+                        color: #17181C;
+
+                        @include lg {
+                            font-size: rem(34);
+                        }
+
+                        @include sm {
+                            font-size: rem(26);
+                        }
+                    }
+
+                    p {
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(16);
+                        line-height: 150%;
+                        color: #17181C;
+                        padding: rem(20);
+
+                        include lg {
+                            font-size: rem(15);
+                        }
+
+                        @include sm {
+                            text-align: center;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .hr-top {
+            padding-top: rem(85);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .hr-inner {
+            @include df-center;
+
+            .hr-headline {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(36);
+                line-height: 139%;
+                color: #000000;
+                width: 72%;
+                padding: rem(71) 0 rem(60) rem(34);
+
+                span {
+                    color: #7e6745;
+                }
+
+                @include lg {
+                    font-size: rem(30);
+                }
+
+                @include md {
+                    font-size: rem(26);
+                }
+
+                @include sm {
+                    font-size: rem(22);
+                    padding: rem(30) 0 rem(20) rem(10);
+                }
+
+                @include sm {
+                    font-size: rem(18);
+                }
+            }
+        }
+
+        .hr-bottom {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+
+    }
+
+    .about-secondary {
+        margin-top: rem(60);
+        width: 100%;
+        background: linear-gradient(to right, #090909 50%, #000 50%);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+
+        .about-leaf-2{
+            position: absolute;
+            top: 443px;
+            left: 148px;
+
+            @media (max-width: 1450px) {
+                display: none;
+            }
+        }
+
+        @include md {
+            background: linear-gradient(to bottom, #090909 20%, #000 80%);
+        }
+
+        .container.wrapper {
+            display: flex !important;
+            flex-wrap: wrap;
+
+            .secondary-left {
+                width: 40%;
+                background: #090909;
+                display: flex;
+                flex-direction: column;
+                padding: rem(75) 0;
+
+                @include md {
+                    width: 100%;
+                    align-items: center;
+                    padding: rem(45) 0;
+                }
+
+
+                h2 {
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(36);
+                    line-height: 133%;
+                    color: #FFFFFF;
+                    text-align: left;
+
+                    @include lg {
+                        font-size: rem(30);
+                    }
+
+                    @include md {
+                        text-align: center;
+                    }
+
+                    span {
+                        color: #F9B32F;
+                    }
+                }
+
+                .btn {
+                    width: 60%;
+                    padding-top: rem(68);
+
+                    @include md{
+                        width: 100%;
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .secondary-right {
+                background: #000;
+                width: 60%;
+                padding: rem(70);
+                padding-right: 0;
+
+                @include md {
+                    width: 100%;
+                    padding: rem(40);
+                }
+
+                .secondary-headline {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(24);
+                    line-height: 150%;
+                    color: #fff;
+                    padding-bottom: rem(25);
+
+                    @include lg {
+                        font-size: rem(20);
+                    }
+
+                    @include sm {
+                        line-height: 120%;
+                        font-size: rem(18);
+                    }
+                }
+
+                .secondary-description {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(20);
+                    line-height: 150%;
+                    color: #DEDEDE;
+
+                    @include lg {
+                        font-size: rem(18);
+                    }
+
+                    @include sm {
+                        line-height: 120%;
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+    }
+
+    .about-teritary {
+        padding-top: rem(60);
+        display: flex;
+        width: 100%;
+
+        @include sm {
+            flex-wrap: wrap;
+        }
+
+        .teritary-image {
+            width: 80%;
+
+            @include md {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .teritary-info {
+            width: 40%;
+            background: #FFFFFF;
+            box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 70%;
+            padding: rem(30) rem(30) rem(45) rem(60);
+            transform: translate(-120px, 40px);
+
+            @include xl {
+                padding: rem(30) rem(15) rem(20) rem(30);
+            }
+
+            @include md {
+                transform: translate(-80px, 16px);
+                padding: rem(20) rem(10) rem(14) rem(16);
+            }
+
+            @include sm {
+                width: 90%;
+                transform: translateY(-40px);
+                margin: 0 auto;
+            }
+
+            .teritary-headline {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(36);
+                line-height: 133%;
+                color: #17181C;
+                padding-bottom: rem(19);
+
+                @include lg {
+                    font-size: rem(28);
+                }
+
+                @include md {
+                    font-size: rem(22);
+                    padding-bottom: rem(14);
+                }
+            }
+
+            .teritary-description {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(20);
+                line-height: lh(34, 20);
+                color: #000000;
+
+                @include lg {
+                    font-size: rem(16);
+                    line-height: lh(24, 16);
+                }
+
+                @include md {
+                    font-size: rem(14);
+                    line-height: lh(20, 14);
+                }
+            }
+        }
+
+    }
+
+    .categories {
+        padding-top: rem(64);
+
+        .section-title {
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+        }
+
+    }
+
+    .why-us {
+        transform: translateY(0);
+        padding: rem(70) 0;
+
+    }
+
+    .mySwiper,
+    .section-title-review {
+        transform: translateY(680px);
+
+        @include sm {
+            transform: translateY(710px);
+        }
+    }
+
+    .section-title-review {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(55);
+        line-height: lh(65, 55);
+        text-align: center;
+        color: #151515;
+        text-align: center;
+
+        @include md {
+            font-size: rem(45);
+        }
+
+        @include sm {
+            font-size: rem(40);
+        }
+
+        @include xs {
+            font-size: rem(36);
+        }
+    }
+
+    .service-line {
+        transform: translateY(630px);
+
+        @include md {
+            transform: translateY(680px);
+        }
+
+        @include md {
+            transform: translateY(700px);
+        }
+    }
+
+    .footer {
+        transform: translateY(800px);
+    }
+
+}

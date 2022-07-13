@@ -1,0 +1,44 @@
+.categories-card {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    flex: 1 1 47%;
+    height: 221px;
+    position: relative;
+
+    .categories-img-block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        .categories-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+    }
+
+    .categories-card-info {
+        padding: rem(23) rem(32);
+
+        .categories-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(24);
+            line-height: lh(32, 24);
+            color: #000;
+        }
+
+        .arrow-btn-block {
+            justify-content: start;
+            color: #000;
+
+            path {
+                stroke: #000;
+            }
+        }
+    }
+}

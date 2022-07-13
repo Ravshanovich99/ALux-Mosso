@@ -1,0 +1,1334 @@
+.filtred-objects {
+    .header {
+        align-items: center;
+        justify-content: center;
+        // padding: 10px 0;
+
+        .nav {
+            .header-left {
+                .logo {
+                    width: 20%;
+                    height: 10%;
+
+                    @include sm {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .container {
+
+        .section-subtitle {
+            padding-top: rem(19);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: 188%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #717171;
+            text-align: left;
+
+            @include md {
+                padding-top: rem(109);
+                font-size: rem(14);
+            }
+
+            @include sm {
+                font-size: rem(12);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(65, 55);
+            text-align: center;
+            color: #151515;
+            text-align: left;
+            padding-bottom: rem(50);
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .objects-count {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(21);
+            line-height: lh(30, 21);
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #000000;
+            padding-bottom: rem(30);
+        }
+
+        .objects-container {
+            position: relative;
+
+            .filter {
+                transform: translateY(0px);
+            }
+
+            // .objects-filter {
+            //     width: 100%;
+            //     display: flex;
+            //     flex-direction: column;
+            //     background: linear-gradient(to left top, #232323 8.75%, #000000 70.62%);
+            //     height: auto;
+            //     border-radius: 8px;
+            //     background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+            //     position: relative;
+            //     z-index: 1;
+            //     transition: 0.6s;
+
+            //     &.blur-active {
+            //         filter: blur(4px);
+            //     }
+
+            //     .top {
+            //         width: 100%;
+            //         display: flex;
+            //         justify-content: space-between;
+            //         background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+            //         border-radius: 8px;
+            //         padding: rem(16) rem(32);
+
+            //         @include lg {
+            //             padding: rem(16);
+            //         }
+
+            //         @include md {
+            //             flex-wrap: wrap;
+            //             justify-content: space-between;
+            //         }
+
+
+            //         .apartments {
+            //             width: 30%;
+            //             @include df-between;
+
+            //             @include md {
+            //                 width: 48%;
+            //                 flex: 1 1 200px;
+            //             }
+
+            //             @include lg {
+            //                 width: 35%;
+            //             }
+
+            //             @include sm {
+            //                 width: 100%;
+            //             }
+
+            //             .appartments-title {
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 600;
+            //                 font-size: rem(16);
+            //                 line-height: lh(19, 16);
+            //                 text-align: center;
+            //                 color: #FFFFFF;
+            //                 width: 25%;
+            //             }
+
+            //             .nums {
+            //                 width: 62%;
+            //                 border-radius: 3px;
+            //                 border: 1px solid #FFBF31;
+            //                 color: #fff;
+            //                 background: #000;
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 600;
+            //                 font-size: rem(16);
+            //                 line-height: lh(19, 16);
+            //                 text-align: center;
+            //                 display: flex;
+            //                 justify-content: space-between;
+
+            //                 @include xl {
+            //                     width: 50%;
+            //                 }
+
+            //                 .num {
+            //                     width: 20%;
+            //                     height: 100%;
+            //                     background: #000;
+            //                     @include df-center;
+            //                     color: #fff;
+            //                     padding: rem(20);
+            //                     cursor: pointer;
+
+            //                     @include xl {
+            //                         padding: rem(14);
+            //                     }
+
+            //                     &.active {
+            //                         background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+            //                         border-radius: 3px;
+            //                         color: #000;
+            //                     }
+            //                 }
+            //             }
+
+            //             .appartments-description {
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 400;
+            //                 font-size: rem(16);
+            //                 line-height: lh(19, 16);
+            //                 color: #FFFFFF;
+            //                 opacity: 0.5;
+            //                 width: 10%;
+            //             }
+            //         }
+
+            //         .money {
+            //             width: 30%;
+            //             @include df-between;
+
+            //             @include md {
+            //                 width: 48%;
+            //                 flex: 1 1 200px;
+            //                 padding: rem(20) 0;
+            //                 justify-content: space-between;
+            //             }
+
+            //             @include sm {
+            //                 width: 100%;
+            //             }
+
+            //             p {
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 400;
+            //                 font-size: rem(16);
+            //                 line-height: lh(19, 16);
+            //                 color: #FFFFFF;
+            //             }
+
+            //             input {
+            //                 width: 33%;
+            //                 background: #242424;
+            //                 border-radius: 3px;
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 400;
+            //                 font-size: rem(16);
+            //                 line-height: lh(19, 16);
+            //                 color: #FFFFFF;
+            //                 padding: rem(20) rem(15);
+            //                 border: none
+            //             }
+            //         }
+
+            //         .checkboxes {
+            //             @include df-between;
+            //             position: relative;
+            //             width: 30%;
+
+            //             @include md {
+            //                 flex: 1 1 400px;
+            //                 justify-content: center;
+            //                 gap: 30px;
+            //                 padding-top: rem(20);
+            //             }
+
+            //             @include sm {
+            //                 width: 100%;
+            //             }
+
+            //             label {
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 600;
+            //                 font-size: 16px;
+            //                 line-height: 19px;
+            //                 color: #FFFFFF;
+
+            //                 @include lg {
+            //                     font-size: rem(14);
+            //                     padding-left: rem(10);
+            //                 }
+
+            //                 @include md {
+            //                     font-size: rem(16);
+            //                     padding-left: rem(0);
+            //                 }
+            //             }
+
+            //             .checkbox-1 {
+
+            //                 input {
+            //                     opacity: 0;
+            //                 }
+
+            //                 .checkbox_style {
+            //                     position: absolute;
+            //                     height: 24px;
+            //                     width: 24px;
+            //                     background-color: transparent;
+            //                     border-radius: 3px;
+            //                     border: 1px solid #FFBF31;
+            //                 }
+
+            //                 .checkbox_style:after {
+            //                     position: absolute;
+            //                     top: 2px;
+            //                     left: 6px;
+            //                     content: "";
+            //                     width: 9px;
+            //                     height: 16px;
+            //                     border: solid white;
+            //                     border-width: 0px 4px 4px 0px;
+            //                     transform: rotate(45deg);
+            //                     visibility: hidden;
+            //                 }
+
+            //                 input:checked~.checkbox_style:after {
+            //                     visibility: visible;
+            //                 }
+            //             }
+
+            //             .checkbox-2 {
+
+            //                 input {
+            //                     opacity: 0;
+            //                 }
+
+            //                 .checkbox_style {
+            //                     position: absolute;
+            //                     height: 24px;
+            //                     width: 24px;
+            //                     background-color: transparent;
+            //                     border-radius: 3px;
+            //                     border: 1px solid #FFBF31;
+            //                 }
+
+            //                 .checkbox_style:after {
+            //                     position: absolute;
+            //                     top: 2px;
+            //                     left: 6px;
+            //                     content: "";
+            //                     width: 9px;
+            //                     height: 16px;
+            //                     border: solid white;
+            //                     border-width: 0px 4px 4px 0px;
+            //                     transform: rotate(45deg);
+            //                     visibility: hidden;
+            //                 }
+
+            //                 input:checked~.checkbox_style:after {
+            //                     visibility: visible;
+            //                 }
+            //             }
+
+
+
+            //         }
+            //     }
+
+            //     .mid {
+            //         display: flex;
+            //         justify-content: space-between;
+            //         padding: rem(16) rem(32);
+
+            //         @include md {
+            //             flex-wrap: wrap;
+            //         }
+
+            //         .mid-left {
+            //             width: 30%;
+            //             display: flex;
+            //             flex-direction: column;
+            //             justify-content: space-between;
+
+            //             @include md {
+            //                 flex: 1 1 200px;
+            //                 padding-bottom: rem(10);
+            //             }
+
+            //             .city {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 select {
+            //                     background: #FFFFFF;
+            //                     border-radius: 3px;
+            //                     padding: rem(20) rem(17);
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 400;
+            //                     font-size: rem(16);
+            //                     line-height: lh(19, 16);
+            //                     color: #000000;
+            //                     width: 80%;
+            //                 }
+            //             }
+
+            //             .object-checkboxes {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 padding-top: rem(20);
+
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                     width: 90%;
+            //                     text-align: left;
+            //                 }
+
+            //                 .obj-checkbox {
+            //                     display: flex;
+            //                     justify-content: space-between;
+            //                     width: 100%;
+            //                     height: 40px;
+
+
+            //                     input {
+            //                         opacity: 0;
+            //                     }
+
+            //                     .checkbox_style {
+            //                         position: absolute;
+            //                         height: 24px;
+            //                         width: 24px;
+            //                         background-color: transparent;
+            //                         border-radius: 3px;
+            //                         border: 1px solid #FFBF31;
+
+            //                     }
+
+            //                     .checkbox_style:after {
+            //                         position: absolute;
+            //                         top: 2px;
+            //                         left: 6px;
+            //                         content: "";
+            //                         width: 9px;
+            //                         height: 16px;
+            //                         border: solid white;
+            //                         border-width: 0px 4px 4px 0px;
+            //                         transform: rotate(45deg);
+            //                         visibility: hidden;
+            //                     }
+
+            //                     input:checked~.checkbox_style:after {
+            //                         visibility: visible;
+            //                     }
+            //                 }
+            //             }
+
+            //             .date-built {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 .date-inputs {
+            //                     display: flex;
+            //                     justify-content: space-between;
+            //                     align-items: center;
+            //                     width: 80%;
+
+            //                     input {
+            //                         width: 40%;
+            //                         background: #242424;
+            //                         border-radius: 3px;
+            //                         padding: rem(20) rem(15);
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: rem(16);
+            //                         line-height: lh(19, 16);
+            //                         color: #A8A8A8;
+            //                         border: none;
+            //                     }
+            //                 }
+            //             }
+
+            //             .completion-date {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 padding: rem(20) 0;
+            //                 gap: rem(10);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 input {
+            //                     width: 80%;
+            //                     background: #242424;
+            //                     border-radius: 3px;
+            //                     padding: rem(20) rem(15);
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 400;
+            //                     font-size: rem(16);
+            //                     line-height: lh(19, 16);
+            //                     color: #A8A8A8;
+            //                     border: none;
+            //                 }
+            //             }
+
+            //             .surface {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 .surface-inputs {
+            //                     display: flex;
+            //                     justify-content: space-between;
+            //                     align-items: center;
+            //                     width: 80%;
+
+            //                     input {
+            //                         width: 40%;
+            //                         background: #242424;
+            //                         border-radius: 3px;
+            //                         padding: rem(20) rem(15);
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: rem(16);
+            //                         line-height: lh(19, 16);
+            //                         color: #A8A8A8;
+            //                         border: none;
+            //                     }
+
+            //                     span {
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: 16px;
+            //                         line-height: 19px;
+            //                         color: #A8A8A8;
+            //                     }
+
+            //                 }
+            //             }
+
+            //         }
+
+            //         .mid-center {
+            //             width: 30%;
+            //             height: 100%;
+            //             display: flex;
+            //             flex-direction: column;
+            //             justify-content: space-between;
+            //             gap: rem(30);
+
+            //             @include md {
+            //                 flex: 1 1 200px;
+            //                 padding-bottom: rem(10);
+            //             }
+
+            //             .komplex {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 select {
+            //                     background: #FFFFFF;
+            //                     border-radius: 3px;
+            //                     padding: rem(20) rem(17);
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 400;
+            //                     font-size: rem(16);
+            //                     line-height: lh(19, 16);
+            //                     color: #000000;
+            //                     width: 80%;
+            //                 }
+            //             }
+
+            //             .build-year {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 .build-inputs {
+            //                     display: flex;
+            //                     align-items: center;
+            //                     width: 80%;
+            //                     gap: 20px;
+
+            //                     input {
+            //                         width: 40%;
+            //                         background: #242424;
+            //                         border-radius: 3px;
+            //                         padding: rem(20) rem(15);
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: rem(16);
+            //                         line-height: lh(19, 16);
+            //                         color: #A8A8A8;
+            //                         border: none;
+            //                     }
+
+            //                 }
+            //             }
+
+            //             .floores {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 .floor-inputs {
+            //                     display: flex;
+            //                     align-items: center;
+            //                     width: 80%;
+            //                     gap: 20px;
+
+            //                     input {
+            //                         width: 40%;
+            //                         background: #242424;
+            //                         border-radius: 3px;
+            //                         padding: rem(20) rem(15);
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: rem(16);
+            //                         line-height: lh(19, 16);
+            //                         color: #A8A8A8;
+            //                         border: none;
+            //                     }
+            //                 }
+            //             }
+            //         }
+
+            //         .mid-right {
+            //             width: 30%;
+            //             height: 100%;
+            //             gap: rem(30);
+            //             display: flex;
+            //             flex-direction: column;
+            //             justify-content: space-between;
+
+            //             @include md {
+            //                 flex: 1 1 200px;
+            //             }
+
+            //             .structures {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 p {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: 14px;
+            //                     line-height: 17px;
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 div {
+            //                     width: 80%;
+            //                     background-color: #fff;
+            //                     border-radius: 3px;
+            //                     padding: rem(20);
+            //                     cursor: pointer;
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 400;
+            //                     font-size: 16px;
+            //                     line-height: 19px;
+            //                     color: #000;
+            //                 }
+            //             }
+
+            //             .from-sea {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 .sea-inputs {
+            //                     display: flex;
+            //                     justify-content: space-between;
+            //                     align-items: center;
+            //                     width: 80%;
+
+            //                     input {
+            //                         width: 40%;
+            //                         background: #242424;
+            //                         border-radius: 3px;
+            //                         padding: rem(20) rem(15);
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: rem(16);
+            //                         line-height: lh(19, 16);
+            //                         color: #A8A8A8;
+            //                         border: none;
+            //                     }
+
+            //                     span {
+            //                         font-family: 'Fira Sans';
+            //                         font-style: normal;
+            //                         font-weight: 400;
+            //                         font-size: 16px;
+            //                         line-height: 19px;
+            //                         color: #A8A8A8;
+            //                     }
+
+            //                 }
+            //             }
+
+            //             .id {
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 gap: rem(11);
+
+            //                 label {
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 600;
+            //                     font-size: rem(14);
+            //                     line-height: lh(17, 14);
+            //                     color: #FFFFFF;
+            //                 }
+
+            //                 input {
+            //                     width: 40%;
+            //                     background: #242424;
+            //                     border-radius: 3px;
+            //                     padding: rem(20) rem(15);
+            //                     font-family: 'Fira Sans';
+            //                     font-style: normal;
+            //                     font-weight: 400;
+            //                     font-size: rem(16);
+            //                     line-height: lh(19, 16);
+            //                     color: #A8A8A8;
+            //                     border: none;
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //     .bottom {
+            //         display: flex;
+            //         justify-content: space-between;
+            //         padding: rem(16) rem(32);
+
+            //         .bottom-cancel {
+            //             font-family: 'Fira Sans';
+            //             font-style: normal;
+            //             font-weight: 600;
+            //             font-size: rem(16);
+            //             line-height: lh(19, 16);
+            //             color: #6F7478;
+            //             display: flex;
+            //             align-items: center;
+            //             gap: 14px;
+            //             cursor: pointer;
+
+            //             i {
+            //                 color: #6F7478;
+            //                 opacity: 0.3;
+            //                 font-size: rem(24);
+            //             }
+            //         }
+            //     }
+            // }
+
+            // .structure-checkboxes-box {
+            //     background: linear-gradient(234.94deg, #232323 8.75%, #000000 70.62%);
+            //     border-radius: 3px;
+            //     border: 1px solid #FFBF31;
+            //     height: auto;
+            //     width: 80%;
+            //     display: flex;
+            //     flex-direction: column;
+            //     padding: rem(62);
+            //     position: absolute;
+            //     z-index: 2;
+            //     filter: blur(0px);
+            //     transform: translate(12%, -100%) scale(0);
+            //     transition: 0.3s;
+
+            //     &.active {
+            //         transform: translate(12%, -100%) scale(1);
+            //     }
+
+            //     .checkboxes-box-title {
+            //         font-family: 'Fira Sans';
+            //         font-style: normal;
+            //         font-weight: 400;
+            //         font-size: 14px;
+            //         line-height: 17px;
+            //         color: #A8A8A8;
+            //         padding-bottom: rem(20);
+            //     }
+
+            //     .structure-checkboxes {
+            //         display: grid;
+            //         grid-template-columns: auto auto auto auto;
+
+            //         @include sm {
+            //             grid-template-columns: auto auto;
+            //         }
+
+            //         .structure-checkbox {
+            //             padding: rem(20) 0;
+            //             @include df-between;
+
+            //             input {
+            //                 opacity: 0;
+            //             }
+
+            //             .checkbox_style {
+            //                 position: absolute;
+            //                 height: 24px;
+            //                 width: 24px;
+            //                 background-color: transparent;
+            //                 border-radius: 3px;
+            //                 border: 1px solid #FFBF31;
+            //             }
+
+            //             .checkbox_style:after {
+            //                 position: absolute;
+            //                 top: 2px;
+            //                 left: 6px;
+            //                 content: "";
+            //                 width: 9px;
+            //                 height: 16px;
+            //                 border: solid white;
+            //                 border-width: 0px 4px 4px 0px;
+            //                 transform: rotate(45deg);
+            //                 visibility: hidden;
+            //             }
+
+            //             input:checked~.checkbox_style:after {
+            //                 visibility: visible;
+            //             }
+
+            //             label {
+            //                 font-family: 'Fira Sans';
+            //                 font-style: normal;
+            //                 font-weight: 600;
+            //                 font-size: rem(14);
+            //                 line-height: lh(17, 14);
+            //                 color: #FFFFFF;
+            //                 padding-left: rem(36);
+            //             }
+            //         }
+
+            //     }
+
+            //     .checkboxes-box-btns {
+            //         display: flex;
+            //         width: 100%;
+            //         align-items: flex-end;
+            //         justify-content: flex-end;
+            //         padding-top: rem(88);
+            //         gap: rem(12);
+
+            //         @include md {
+            //             @include df-center
+            //         }
+
+            //         .btn {
+            //             @include md {
+            //                 width: 100%;
+
+            //                 button {
+            //                     width: 100%;
+            //                 }
+            //             }
+            //         }
+
+            //         .cancel-btn {
+            //             button {
+            //                 background: transparent;
+            //                 box-shadow: none;
+            //                 border: 1px solid #A8A8A8;
+            //                 color: #A8A8A8;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+
+
+        .filtred-objects-tabs {
+            padding-top: rem(54);
+            display: flex;
+            gap: rem(10);
+            align-items: center;
+            flex-wrap: wrap;
+
+            h3 {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(18);
+                line-height: lh(30, 18);
+                color: #000000;
+
+                @include sm {
+                    font-size: rem(16);
+                }
+            }
+
+            .objects-tab {
+                padding: rem(10) rem(20);
+                background-color: #fff;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(18);
+                line-height: lh(30, 18);
+                color: #000000;
+                border-radius: 3px;
+
+                @include sm {
+                    font-size: rem(16);
+                    white-space: nowrap;
+                }
+
+                &.active {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+
+        .swiper {
+            position: relative;
+
+            .swiper-pagination {
+                position: static;
+                z-index: 99 !important;
+                padding-top: rem(50);
+
+                .swiper-pagination-bullet {
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid #FFBF31;
+                    border-radius: 0%;
+                    padding: 10px;
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: #000000;
+
+                    &-active {
+                        background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                    }
+                }
+
+            }
+        }
+
+        .filtred-objects-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            padding-top: rem(40);
+
+            @include sm {
+                justify-content: center;
+            }
+
+            .card {
+                width: 99%;
+                display: flex;
+                background: #FFFFFF;
+                box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.1);
+                border-radius: 3px;
+                box-sizing: border-box;
+                transition: 500ms;
+                margin: 0 auto;
+                height: auto;
+                align-items: stretch;
+
+                @include md {
+                    flex-direction: column;
+                    width: 47%;
+                }
+
+                @include sm {
+                    width: 90%;
+                }
+
+                @include xs {
+                    width: 92%;
+                }
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+
+                .img-block {
+                    width: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    flex-shrink: 1;
+
+                    @include lg {
+                        width: 70%;
+                    }
+
+                    @include md {
+                        width: auto;
+                        height: 171px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 335px;
+                        overflow: hidden;
+                        transition: 500ms;
+                        object-fit: cover;
+
+                        @include md {
+                            height: 171px;
+                        }
+                    }
+
+                    .icons {
+                        position: absolute;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        z-index: 99;
+                        padding: rem(10);
+
+                        .play {
+                            width: 36px;
+                            height: 36px;
+                            background: #000;
+                            border-radius: 50%;
+                            @include df-center;
+
+                            i {
+                                font-size: rem(18);
+                                color: #7E6745;
+                                cursor: pointer;
+                                transition: 300ms;
+
+                                &:hover {
+                                    color: #FFBF31;
+                                }
+                            }
+                        }
+
+                        .heart {
+                            width: 36px;
+                            height: 36px;
+                            background: #000;
+                            border-radius: 50%;
+                            @include df-center;
+
+                            i {
+                                font-size: rem(18);
+                                color: #7E6745;
+                                cursor: pointer;
+
+                                &.active {
+                                    color: #FFBF31;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .swiper {
+                        overflow-y: hidden;
+
+                        .swiper-pagination {
+                            position: absolute;
+                            padding-bottom: 0px;
+                            transform: translateY(0px) !important;
+
+                            .swiper-pagination-bullet {
+                                width: 14px;
+                                height: 14px;
+                                border: 1px solid #7E6745;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                padding: 0;
+
+                                &-active {
+                                    background: #fff;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                .card-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 10px;
+                    padding: rem(15) rem(20) rem(22);
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: auto;
+
+                    @include md {
+                        gap: rem(14);
+                    }
+
+                    .card-info-top {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        @include md {
+                            flex-direction: column;
+
+                        }
+
+                        .info-top-description {
+                            display: flex;
+                            flex-direction: column;
+
+                            .card-top-title {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: rem(18);
+                                line-height: lh(24, 18);
+                                color: #000;
+                                padding-bottom: rem(20);
+                            }
+
+                            .card-top-id {
+                                width: 40%;
+                                font-family: 'Fira Sans';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: rem(14);
+                                line-height: lh(17, 14);
+                                color: #000;
+                                border: 1px solid #FFBF31;
+                                padding: toEm(6, 14) toEm(12, 14);
+                                border-radius: 3px;
+                                @include df-center;
+                            }
+                        }
+
+                        .card-top-price {
+                            font-family: 'Playfair Display';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(18);
+                            line-height: lh(24, 18);
+                            color: #000;
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            padding-top: toEm(24, 18);
+                        }
+                    }
+
+                    .card-info-mid {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: rem(22);
+
+                        .mid-adress {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: lh(24, 16);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #000000;
+                        }
+
+                        .mid-short-description {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(14);
+                            line-height: lh(18, 14);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #000000;
+
+                            @include md {
+                                display: none;
+                            }
+                        }
+                    }
+
+
+                    .card-info-bottom {
+                        display: flex;
+                        gap: rem(37);
+
+                        @include md {
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+
+                        .location {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: lh(19, 16);
+                            color: #000;
+                        }
+
+                        .width {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: lh(19, 16);
+                            color: #000;
+                        }
+
+                        .rooms {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: lh(19, 16);
+                            color: #000
+                        }
+                    }
+                }
+            }
+
+            padding-bottom: rem(40);
+        }
+
+        .paginations {
+            width: fit-content;
+            flex-grow: 0;
+            flex-basis: 0;
+            flex-shrink: 0;
+            @include df-center;
+            border: 1px solid #FFBF31;
+            margin: 0 auto;
+            transition: 300ms;
+            border-radius: 3px;
+
+            p {
+                @include df-center;
+                cursor: pointer;
+                padding: 20px;
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 600;
+                font-size: re8(18);
+                line-height: lh(24, 18);
+                text-align: center;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                transition: 300ms;
+
+                &.active {
+                    background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                    border-radius: 3px;
+                }
+            }
+        }
+
+    }
+
+    .footer {
+        transform: translateY(100px);
+
+        @include md {
+            transform: translateY(60px);
+        }
+    }
+}

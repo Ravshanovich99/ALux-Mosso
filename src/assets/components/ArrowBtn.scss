@@ -1,0 +1,19 @@
+.arrow-btn-block {
+    @include df-center;
+    gap: 18px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: lh(55, 18);
+    color: #000000;
+    padding: toEm(17, 18) 0 toEm(17, 18);
+    cursor: pointer;
+    svg{
+        cursor: pointer;
+        path{
+            cursor: pointer;
+        }
+    }
+
+}

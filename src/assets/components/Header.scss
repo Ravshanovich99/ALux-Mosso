@@ -1,0 +1,369 @@
+.header {
+    width: 100%;
+    background: #000;
+    position: relative;
+
+
+    @include md {
+        position: fixed !important;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        background-color: #000 !important;
+        box-shadow: 0 0 2px #FFBF31,
+            0 0 4px #FFBF31,
+            0 0 7px #FFBF31;
+    }
+
+    .nav {
+        @include df-between;
+        position: relative;
+        z-index: 100;
+
+        @include md {
+            background-color: #000;
+
+        }
+
+        .header-left {
+            width: 30%;
+            @include df-between;
+            z-index: inherit;
+
+            @include md {
+                width: 68%;
+            }
+
+            @include sm {
+                width: 50%;
+                justify-content: space-between;
+            }
+
+            .burger-menu {
+                height: 18px;
+                width: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: ease-in-out 500ms;
+                position: relative;
+                z-index: 999;
+
+                &.active span:nth-child(1) {
+                    transform: rotate(45deg) translateY(11px);
+                }
+
+                &.active span:nth-child(2) {
+                    transform: rotate(-45deg) translateY(-11px);
+                }
+
+
+                span {
+                    height: 3px;
+                    background-color: #fff;
+                    width: clamp(30px, 50%, 40px);
+                    border-radius: 20px;
+                    transition: 500ms;
+                }
+
+                &:hover span {
+                    background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                }
+            }
+
+
+            .logo {
+                width: 30%;
+                height: auto;
+                cursor: pointer;
+
+                @include md {
+                    width: 20%;
+                }
+
+                @include sm {
+                    width: 30%;
+                }
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .info {
+                width: 57%;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                line-height: lh(22, 14);
+                font-size: rem(14);
+                color: #fff;
+
+                @include md {
+                    width: 100%;
+                }
+
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+
+        .header-center {
+            width: 25%;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            z-index: inherit;
+
+            @include md {
+                display: none;
+            }
+
+            .currency {
+                width: 22%;
+
+                select {
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid #FFBF31;
+                    border-radius: 3px;
+                    background: #000;
+                    color: #fff;
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(18);
+                    line-height: lh(22, 18);
+                    padding: toEm(10, 18);
+                }
+            }
+
+            .lang-block {
+                display: flex;
+                justify-content: center;
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(16);
+                line-height: lh(19, 16);
+                text-align: center;
+                gap: 10px;
+
+                width: 48%;
+
+                .btn {
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .header-right {
+            width: 37%;
+            @include df-between;
+            color: #fff;
+            gap: 37px;
+            z-index: inherit;
+
+            @include lg {
+                width: 40%;
+                justify-content: flex-end;
+            }
+
+            @include md {
+                width: 32%;
+            }
+
+            @include sm {
+                width: 45%;
+                white-space: nowrap;
+            }
+
+            .phone {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-end;
+
+                @include lg {
+                    display: none;
+                }
+
+                p {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(14);
+                    line-height: lh(17, 14);
+                    text-align: right;
+                    color: #949494;
+                    text-align: right;
+
+                    @include lg {
+                        font-size: rem(14);
+                    }
+                }
+
+                .phone-call {
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(22);
+                    line-height: lh(29, 22);
+                    color: #fff;
+                    cursor: pointer;
+
+                    @include xl {
+                        font-size: rem(16);
+                    }
+                }
+            }
+
+            .btn {
+                flex-basis: 1;
+
+                @include md {
+                    width: 100%;
+                }
+
+                button {
+                    @include md {
+                        width: 100%;
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .navigation-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: center;
+        position: fixed;
+        background-color: #000;
+        color: #fff;
+        left: -100%;
+        top: 0px;
+        width: 70%;
+        height: 100%;
+        z-index: 90;
+        transition: 500ms;
+        gap: rem(14);
+        padding: rem(100) rem(80);
+        overflow-y: hidden;
+
+        @include lg {
+            padding: rem(100) rem(50);
+        }
+
+        @include md {
+            width: 100%;
+            height: 100%;
+            // padding-left: rem(20);
+            // padding-top: rem(10);
+            gap: rem(12);
+            overflow: auto;
+            padding: rem(100) rem(30);
+        }
+
+        @include sm {
+            gap: rem(5);
+        }
+
+        &.active {
+            left: 0;
+        }
+
+        .md-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: rem(15);
+
+            @include md {
+                display: flex;
+            }
+
+            .phone {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                h3 {
+                    font-family: 'Playfair Display';
+                }
+
+                p {
+                    font-family: "Fira Sans";
+                }
+            }
+
+
+            .header-center {
+                display: flex;
+                gap: rem(10);
+
+                .lang-block {
+                    display: flex;
+                    gap: rem(8);
+                }
+
+                .currency {
+                    select {
+                        width: 100%;
+                        height: 40px;
+                        border: 1px solid #FFBF31;
+                        border-radius: 3px;
+                        background: #000;
+                        color: #fff;
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(18);
+                        line-height: lh(22, 18);
+                        padding: toEm(5, 18);
+                    }
+                }
+            }
+        }
+
+        .arrow-btn-block {
+            padding: toEm(10, 18);
+            color: #fff;
+            line-height: lh(0, 11);
+            gap: 10px;
+            transition: 300ms;
+
+            @include sm {
+                font-size: rem(14);
+            }
+
+            &:hover {
+                color: #FFBF31;
+            }
+
+            svg {
+                path {
+                    stroke: #fff
+                }
+            }
+
+            &:hover svg {
+                path {
+                    stroke: #FFBF31;
+                }
+            }
+        }
+    }
+}

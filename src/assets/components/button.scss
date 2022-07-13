@@ -1,0 +1,67 @@
+.btn {
+    cursor: pointer;
+    font-family: 'Fira Sans';
+    color: #fff;
+
+
+    &.btn-text>button {
+        width: 65px;
+        height: 40px;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        background-color: #000;
+        color: #fff;
+        transition: 500ms;
+
+        &.active {
+            border: 1px solid #FFBF31;
+        }
+    }
+
+    &.btn-elevated>button {
+        background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+        box-shadow: 0px 10px 30px rgba(245, 177, 51, 0.4);
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: lh(19, 16);
+        text-align: center;
+        color: #000;
+        padding: toEm(20, 16) toEm(26, 16);
+        border-radius: 3px;
+        width: 205px;
+        border: 1px solid transparent;
+        transition: 0.3s;
+
+        &:hover {
+            background: transparent;
+            border: 1px solid #FFBF31;
+            color: #fff;
+
+        }
+
+        @include lg {
+            width: 185px;
+            white-space: nowrap;
+            padding: toEm(20, 16) toEm(22, 16);
+        }
+
+        @include md {
+            width: 155px;
+            padding: toEm(17, 16) toEm(12, 16);
+        }
+
+        @include sm {
+            width: 125px;
+            font-size: rem(14);
+            width: 155px;
+            padding: toEm(14, 14) toEm(12, 14);
+        }
+
+        @include xs {
+            width: 115px;
+            font-size: rem(14);
+            padding: toEm(14, 14) toEm(8, 14);
+        }
+    }
+}

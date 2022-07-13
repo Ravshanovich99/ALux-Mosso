@@ -1,0 +1,121 @@
+.optional-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: rem(25) rem(20);
+    background: #000000;
+    box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.06);
+    transition: 300ms;
+    height: auto;
+
+    @include sm {
+        height: auto;
+    }
+
+    .optional-card-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: lh(30, 24);
+        color: #FFFFFF;
+    }
+
+    .optional-card-text {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: lh(24, 16);
+        color: #C1C1C1;
+        padding: toEm(23, 16) 0;
+    }
+
+
+    .optional-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+
+        .optional-card-inp {
+            width: 100%;
+            background: #171717;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            padding: rem(17) rem(20);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: lh(26, 16);
+            color: #FFFFFF;
+            transition: 300ms;
+
+        }
+
+        .agree-inp {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: lh(22, 16);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: toEm(14, 16) 0;
+            gap: 10px;
+
+            @include xl {
+                font-size: rem(14);
+            }
+
+            input {
+                transform: scale(1.5);
+            }
+
+            label {
+                width: 100%;
+                margin-right: -15px;
+                font-size: rem(14);
+
+                @include lg {
+                    padding-left: 12px;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                color: #fff;
+            }
+        }
+
+        small {
+            width: 100%;
+            font-family: 'Fira Sans';
+            font-style: normal;
+            color: #ff3333;
+            transition: 300ms;
+            font-size: rem(14);
+        }
+
+        .optional-card-inp.invalid {
+            border: 1px solid #ff3333;
+        }
+
+        .btn {
+            width: 100%;
+
+            button {
+                width: 100%;
+                transition: 0.3s;
+                border: 1px solid transparent;
+
+                &:hover {
+                    border: 1px solid #FFBF31;
+                    background: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

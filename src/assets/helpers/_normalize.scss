@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 1;
+    font-family: inherit;
+}
+
+input,
+select,
+button,
+textarea {
+    outline: none;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+    min-width: 320px;
+    background: #fff;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+body.night-mode {
+    background: #1C1C27;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.html {
+    scroll-behavior: smooth;
+}

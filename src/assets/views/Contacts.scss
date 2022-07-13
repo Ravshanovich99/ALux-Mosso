@@ -1,0 +1,519 @@
+.contacts {
+    .header {
+        align-items: center;
+        justify-content: center;
+        // padding: 10px 0;
+
+        .nav {
+            .header-left {
+                .logo {
+                    width: 20%;
+                    height: 10%;
+
+                    @include sm{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+
+        .section-subtitle {
+            padding-top: rem(19);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: 188%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #717171;
+            text-align: left;
+
+            @include md {
+                padding-top: rem(109);
+                font-size: rem(14);
+            }
+
+            @include sm {
+                font-size: rem(12);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(65, 55);
+            text-align: center;
+            color: #151515;
+            text-align: left;
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+
+
+        .contacts-main {
+            display: flex;
+            justify-content: space-between;
+
+            @include md {
+                flex-direction: column;
+            }
+
+            .contacts-left {
+                width: 65.8%;
+                display: flex;
+                flex-direction: column;
+
+                @include md {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .map {
+                    width: 100%;
+                    height: 100%;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .map-title {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(24);
+                    line-height: 150%;
+                    padding-top: toEm(36, 24);
+                }
+
+                .map-description {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(20);
+                    line-height: 150%;
+                    padding-top: toEm(45, 20);
+                }
+            }
+
+            .contacts-right {
+                width: 31.7%;
+                display: flex;
+                flex-direction: column;
+
+                @include md {
+                    width: 100%;
+                    @include df-center;
+                    flex-wrap: wrap;
+                }
+
+                .contacts-info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    color: #fff;
+
+                    @include md {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    .navigate {
+                        background-color: #000;
+                        display: flex;
+                        padding: rem(25) rem(15);
+
+                        @include md {
+                            flex-direction: column;
+                            width: 25%;
+                            justify-content: space-between;
+                        }
+
+                        @include sm {
+                            width: 50%;
+                        }
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+
+                            @include md {
+                                width: 100%;
+                            }
+                        }
+
+                        .navigate-info {
+                            width: 80%;
+
+                            @include md {
+                                width: 100%;
+                            }
+
+
+                            p {
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(14);
+                                line-height: 214%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #929292;
+
+                                @include md {
+                                    font-size: rem(12);
+                                }
+                            }
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(18);
+                                line-height: 167%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #FFFFFF;
+
+                                @include md {
+                                    font-size: rem(16);
+                                }
+
+                            }
+                        }
+                    }
+
+                    .phone {
+                        background: #121212;
+                        @include df-center;
+
+                        @include md {
+                            flex-direction: column;
+                            width: 25%;
+                        }
+
+                        @include sm {
+                            width: 50%;
+                        }
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+
+                            @include md {
+                                width: 100%;
+                                @include df-center
+                            }
+                        }
+
+                        .phone-info {
+                            width: 80%;
+
+                            @include md {
+                                width: 100%;
+                            }
+
+                            p {
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(14);
+                                line-height: 214%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #929292;
+
+                                @include md {
+                                    font-size: rem(12);
+                                }
+                            }
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(18);
+                                line-height: 167%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #FFFFFF;
+
+                                @include md {
+                                    font-size: rem(16);
+                                }
+
+                            }
+                        }
+                    }
+
+                    .email {
+                        background-color: #000;
+                        display: flex;
+                        padding: rem(25) rem(15);
+
+                        @include md {
+                            flex-direction: column;
+                            width: 25%;
+                            justify-content: space-between;
+                        }
+
+                        @include sm {
+                            width: 50%;
+                        }
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+
+                            @include md {
+                                width: 100%;
+                            }
+                        }
+
+                        .email-info {
+                            width: 80%;
+
+                            @include md {
+                                width: 100%;
+                            }
+
+                            p {
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(14);
+                                line-height: 214%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #929292;
+
+                                @include md {
+                                    font-size: rem(12);
+                                }
+                            }
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(18);
+                                line-height: 167%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #FFFFFF;
+
+                                @include md {
+                                    font-size: rem(16);
+                                }
+
+                            }
+                        }
+                    }
+
+                    .work {
+                        background: #121212;
+                        display: flex;
+                        padding: rem(14);
+
+                        @include md {
+                            flex-direction: column;
+                            width: 25%;
+                            justify-content: space-between;
+                        }
+
+                        @include sm {
+                            width: 50%;
+                        }
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+
+                            @include md {
+                                width: 100%;
+                            }
+                        }
+
+                        .work-info {
+                            width: 80%;
+
+                            @include md {
+                                width: 100%;
+                            }
+
+                            p {
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(14);
+                                line-height: 214%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #929292;
+
+                                @include md {
+                                    font-size: rem(12);
+                                }
+                            }
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(18);
+                                line-height: 167%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #FFFFFF;
+
+                                @include md {
+                                    font-size: rem(16);
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                .contacts-pdfs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-top: rem(25);
+
+                    .about-pdf {
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        padding: rem(24);
+                        gap: rem(20);
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+                        }
+
+                        .pdf-info {
+                            width: 80%;
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(16);
+                                line-height: 162%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #000000;
+                            }
+
+                            a {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(16);
+                                line-height: 188%;
+                                text-decoration-line: underline;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #F68E20;
+                            }
+                        }
+                    }
+
+                    .memo-pdf {
+                        background: #FFFFFF;
+                        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        padding: rem(24);
+                        gap: rem(20);
+
+                        i {
+                            width: 20%;
+                            @include df-center;
+                            color: #A9A9A9;
+                            font-size: rem(40);
+                        }
+
+                        .pdf-info {
+                            width: 80%;
+
+                            h3 {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(16);
+                                line-height: 162%;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #000000;
+                            }
+
+                            a {
+                                font-family: 'Playfair Display';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: rem(16);
+                                line-height: 188%;
+                                text-decoration-line: underline;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #F68E20;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        .company-info-service {
+            .company-images {
+                @include lg {
+                    top: 200px;
+                }
+            }
+        }
+
+        hr {
+            padding-top: 100px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+
+    .footer {
+        transform: translateY(780px);
+    }
+
+}
+
+.service-line {
+    transform: translateY(620px);
+
+    @include xl {
+        transform: translateY(660px);
+    }
+
+    @include lg {
+        transform: translateY(760px);
+    }
+}

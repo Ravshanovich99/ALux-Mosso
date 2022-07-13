@@ -1,0 +1,123 @@
+.bg {
+
+    .header {
+        background: transparent;
+    }
+
+    .main {
+        display: flex;
+
+        @include md {
+            padding-top: rem(50);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .right {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 70px 0 250px;
+
+                @include lg{
+                    width: 100%;
+                }
+
+                @include md{
+                padding: 70px 0 200px;
+                    
+                }
+
+                h1 {
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: rem(60);
+                    line-height: lh(70, 60);
+                    color: #fff;
+                    padding: toEm(70, 60) 0 toEm(50, 60);
+                    z-index: 1;
+
+                    
+
+                    @include md {
+                        font-size: rem(45);
+                    }
+
+                    @include sm {
+                        font-size: rem(33);
+                    }
+
+                    @include xs {
+                        font-size: rem(24);
+                    }
+                }
+
+                p {
+                    font-family: 'Fira Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: rem(21);
+                    line-height: lh(36, 21);
+                    color: #fff;
+                    z-index: 1;
+
+                    @include md {
+                        font-size: rem(18);
+                    }
+
+                    @include sm {
+                        font-size: rem(16);
+                    }
+
+                    @include xs {
+                        font-size: rem(14);
+                    }
+                }
+
+                .right-flag{
+                    width: 40px;
+                    height: 40px;
+
+                    @include sm{
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+
+        }
+
+        .heart-block {
+            right: 0;
+        }
+
+    }
+
+    .bg-tree {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        img:nth-child(1) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 14%;
+        }
+
+        img:nth-child(2) {
+            position: absolute;
+            left: 90px;
+            bottom: 0;
+            width: 40%;
+        }
+    }
+
+
+}

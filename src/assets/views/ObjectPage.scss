@@ -1,0 +1,746 @@
+.objects {
+    .header {
+        align-items: center;
+        justify-content: center;
+        // padding: 10px 0;
+
+        .nav {
+            .header-left {
+                .logo {
+                    width: 20%;
+                    height: 10%;
+
+                    @include sm {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+
+        .section-subtitle {
+            padding-top: rem(19);
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: 188%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #717171;
+            text-align: left;
+
+            @include md {
+                padding-top: rem(109);
+                font-size: rem(14);
+            }
+
+            @include sm {
+                font-size: rem(12);
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(65, 55);
+            text-align: center;
+            color: #151515;
+            text-align: left;
+            padding-bottom: rem(50);
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .object-main {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .object-left {
+                width: 31.7%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                @include md {
+                    width: 100%;
+                    flex-direction: row;
+                    height: 100%;
+                }
+
+                @include sm {
+                    width: 100%;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .object-info {
+                    display: flex;
+                    flex-direction: column;
+                    background: #fff;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    padding: rem(40) rem(20) rem(27) rem(20);
+                    gap: 30px;
+                    height: auto;
+
+                    @include md {
+                        width: 100%;
+                    }
+
+                    .object-price {
+                        font-family: 'Playfair Display';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(30);
+                        line-height: 80%;
+                        font-feature-settings: 'pnum' on, 'lnum' on;
+                        color: #000000;
+                    }
+
+                    .infos {
+                        @include df-between;
+                        flex-basis: 100%;
+
+                        p {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 175%;
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #717171;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        span {
+                            height: 1px;
+                            background: #EBEBEB;
+                            flex: 1 1 auto;
+                            margin: 0 20px;
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            width: 45%;
+
+                            a {
+                                font-family: 'Fira Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: rem(16);
+                                line-height: 175%;
+                                text-decoration-line: underline;
+                                font-feature-settings: 'pnum' on, 'lnum' on;
+                                color: #7E6745;
+                            }
+                        }
+
+                        h3 {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: 175%;
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #000000;
+                        }
+                    }
+                }
+
+                .object-liked {
+                    background: #000;
+                    box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.1);
+                    border-radius: 3px;
+                    padding: rem(34) rem(20) rem(25) rem(20);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 10%;
+
+                    @include md {
+                        width: 40%;
+                        height: 100%;
+                    }
+
+                    @include sm {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    h3 {
+                        font-family: 'Playfair Display';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(26);
+                        line-height: 100%;
+                        font-feature-settings: 'pnum' on, 'lnum' on;
+                        color: #fff;
+                    }
+
+                    .liked-btns {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        @include md {
+                            padding-top: rem(15);
+                        }
+
+                        @include sm {
+                            text-align: center;
+                        }
+
+                        .btn {
+                            width: 100%;
+
+                            button {
+                                font-family: 'Fira Sans';
+                                width: 100%;
+                                padding: rem(12) rem(12);
+                                box-shadow: none;
+                                line-height: lh(30, 16);
+
+                                @include md {
+                                    font-size: rem(14);
+                                    line-height: lh(12, 14);
+                                    padding: rem(12) rem(12);
+                                }
+
+                                @include sm {
+                                    width: 70%;
+                                    font-size: rem(14);
+                                    line-height: lh(14, 14);
+                                    padding: rem(18) rem(12);
+                                }
+                            }
+                        }
+
+                        .obj-liked-btn-2>button {
+                            background: #000;
+                            border: 1px solid #7E6745;
+                            border-radius: 3px;
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(16);
+                            line-height: lh(30, 16);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #7E6745;
+                            transition: 500ms;
+
+                            @include md {
+                                font-size: rem(14);
+                                line-height: lh(12, 14);
+                                padding: rem(12) rem(12);
+                            }
+
+                            @include sm {
+                                width: 70%;
+                                font-size: rem(14);
+                                line-height: lh(14, 14);
+                                padding: rem(18) rem(12);
+                            }
+                        }
+
+                        .obj-liked-btn-2 {
+                            transition: 500ms;
+                            position: relative;
+
+                            i {
+                                position: absolute;
+                                color: #7E6745;
+                                font-size: rem(30);
+                                z-index: 80;
+                                top: 15px;
+                                left: 20px;
+                                transition: 500ms;
+
+                                @include md {
+                                    font-size: rem(16);
+                                    left: 5px;
+                                    top: 10px;
+                                }
+
+                                @include sm {
+                                    font-size: rem(16);
+                                    right: 140px;
+                                    top: 18px;
+                                }
+                            }
+
+                            &.active {
+                                button {
+                                    background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                                    color: #000;
+                                }
+
+                                i {
+                                    color: #A46D0F;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+
+
+            .object-right {
+                width: 66%;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                @include md {
+                    width: 100%;
+                }
+
+                .object-btns {
+                    display: flex;
+                    gap: 15px;
+                    align-items: stretch;
+
+                    .btn {
+                        width: 18%;
+
+                        @include md {
+                            padding-top: rem(40);
+                            width: 100%;
+                        }
+
+                        button {
+                            width: 100%;
+                            background: #fff;
+                            box-shadow: none;
+                            color: #000;
+                            border: 1px solid #FFBF31;
+                            padding: rem(8) rem(30);
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(14);
+                            line-height: lh(17, 14);
+                            text-align: center;
+
+                            @include md {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    .obj-btn-2>button {
+                        background: #7E6745;
+                        color: #fff;
+                        border: none;
+                    }
+                }
+
+                .object-images {
+                    width: 100%;
+                    padding-top: rem(16);
+                    display: flex;
+                    flex-direction: column;
+                    transition: 500ms;
+
+                    .main-image {
+                        width: 100%;
+                        transition: 500ms;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 440px;
+                            transition: 500ms;
+                        }
+                    }
+
+                    .more-images {
+                        padding-top: rem(21);
+                        display: flex;
+                        width: 100%;
+                        gap: 16px;
+                        transition: 500ms;
+
+                        .more-image {
+                            width: 22%;
+                            transition: 500ms;
+                            @include df-center;
+                            transition: 500ms;
+                            position: relative;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 3px;
+                                transition: 500ms;
+                                border: 2px solid transparent;
+
+                                &.active {
+                                    border: 2px solid #000;
+
+                                }
+                            }
+
+                            .play {
+                                position: absolute;
+                                width: 36px;
+                                height: 36px;
+                                background: #000;
+                                border-radius: 50%;
+                                @include df-center;
+                                display: none;
+                                transition: 500ms;
+
+                                i {
+                                    font-size: rem(18);
+                                    color: #7E6745;
+                                    cursor: pointer;
+                                    transition: 500ms;
+                                }
+
+                                @include md {
+                                    width: 30px;
+                                    height: 30px;
+
+                                    i {
+                                        font-size: rem(16);
+                                    }
+                                }
+
+                                @include sm {
+                                    width: 24px;
+                                    height: 24px;
+
+                                    i {
+                                        font-size: rem(14);
+                                    }
+                                }
+                            }
+
+                            &>img.active+.play {
+                                display: flex;
+                                transition: 500ms;
+                            }
+                        }
+                    }
+                }
+
+                .object-description-short {
+                    padding-top: rem(25);
+
+                    p {
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: rem(16);
+                        line-height: lh(28, 16);
+                        font-feature-settings: 'pnum' on, 'lnum' on;
+                        color: #000000;
+                    }
+
+                }
+
+                .object-descriptions {
+                    padding-top: rem(15);
+                    display: flex;
+                    flex-direction: column;
+
+                    .object-description {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        h3 {
+                            font-family: 'Playfair Display';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(28);
+                            line-height: lh(40, 30);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #717171;
+                        }
+
+                        p {
+                            font-family: 'Fira Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: rem(16);
+                            line-height: lh(28, 16);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #000000;
+                        }
+                    }
+
+                    .addition-description {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        padding-top: rem(40);
+
+                        .addition-headline {
+                            font-family: 'Playfair Display';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: rem(28);
+                            line-height: lh(40, 30);
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            color: #717171;
+                        }
+
+                        .addition-top {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+
+                            @include sm {
+                                grid-template-columns: auto auto;
+                            }
+
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                                width: 25%;
+
+                                h3 {
+                                    font-family: 'Fira Sans';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: rem(16);
+                                    line-height: lh(28, 16);
+                                    font-feature-settings: 'pnum' on, 'lnum' on;
+                                    color: #000;
+                                }
+
+                                p {
+                                    font-family: 'Fira Sans';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: rem(16);
+                                    line-height: lh(28, 16);
+                                    font-feature-settings: 'pnum' on, 'lnum' on;
+                                    color: #000;
+                                }
+
+                                &:nth-child(5),
+                                &:nth-child(6),
+                                &:nth-child(7),
+                                &:nth-child(8) {
+                                    padding-top: rem(35);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .object-ads {
+                    padding-top: rem(64);
+
+                    h3 {
+                        font-family: 'Playfair Display';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(28);
+                        line-height: lh(40, 28);
+                        font-feature-settings: 'pnum' on, 'lnum' on;
+                        color: #000000;
+                        padding-bottom: rem(16);
+                    }
+
+                    .cards {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+                        gap: 10px;
+
+                        .card {
+                            width: 32%;
+                            display: flex;
+                            flex-direction: column;
+                            background: #FFFFFF;
+                            box-shadow: 0px 8px 20px rgba(19, 21, 22, 0.1);
+                            border-radius: 3px;
+                            box-sizing: border-box;
+                            transition: 500ms;
+
+                            &:last-child {
+                                justify-self: flex-start;
+                            }
+
+                            &:hover {
+                                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                            }
+
+                            @include md {
+                                width: 47%;
+                            }
+
+                            @include sm {
+                                width: 80%;
+                            }
+
+                            .img-block {
+                                overflow: hidden;
+                                position: relative;
+                                cursor: pointer;
+                                height: 171px;
+
+                                .icons {
+                                    position: absolute;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    z-index: 88;
+                                    padding: rem(10);
+
+                                    .play {
+                                        width: 36px;
+                                        height: 36px;
+                                        background: #000;
+                                        border-radius: 50%;
+                                        @include df-center;
+
+                                        i {
+                                            font-size: rem(18);
+                                            color: #7E6745;
+                                            cursor: pointer;
+                                            transition: 300ms;
+
+                                            &:hover {
+                                                color: #FFBF31;
+                                            }
+                                        }
+
+                                    }
+
+                                    .heart {
+                                        width: 36px;
+                                        height: 36px;
+                                        background: #000;
+                                        border-radius: 50%;
+                                        @include df-center;
+
+                                        i {
+                                            font-size: rem(18);
+                                            color: #7E6745;
+                                            cursor: pointer;
+
+                                            &.active {
+                                                color: #FFBF31;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: 500ms;
+                                    height: 171px;
+                                }
+
+                                .swiper {
+                                    .swiper-pagination {
+                                        padding-bottom: rem(10);
+
+                                        .swiper-pagination-bullet {
+                                            width: 14px;
+                                            height: 14px;
+                                            border: 1px solid #7E6745;
+                                            background-color: #fff;
+                                        }
+
+                                    }
+                                }
+
+                            }
+
+                            .card-info {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                padding: rem(15) rem(20) rem(22);
+                                box-sizing: border-box;
+
+                                .card-title {
+                                    font-family: 'Playfair Display';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: rem(18);
+                                    line-height: lh(24, 18);
+                                    color: #000;
+                                }
+
+                                .card-id {
+                                    width: 40%;
+                                    display: inline-block;
+                                    font-family: 'Fira Sans';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: rem(14);
+                                    line-height: lh(17, 14);
+                                    text-align: center;
+                                    color: #000;
+                                    border: 1px solid #FFBF31;
+                                    padding: toEm(6, 14) toEm(12, 14);
+                                    border-radius: 3px;
+                                }
+
+                                .width {
+                                    font-family: 'Fira Sans';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: rem(16);
+                                    line-height: lh(19, 16);
+                                    color: #000;
+                                }
+
+                                .rooms {
+                                    font-family: 'Fira Sans';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: rem(16);
+                                    line-height: lh(19, 16);
+                                    color: #000
+                                }
+
+                                .price {
+                                    font-family: 'Playfair Display';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: rem(18);
+                                    line-height: lh(24, 18);
+                                    color: #000;
+                                    font-feature-settings: 'pnum' on, 'lnum' on;
+                                    padding-top: toEm(24, 18);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

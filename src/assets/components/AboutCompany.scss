@@ -1,0 +1,447 @@
+.company {
+    position: relative;
+    padding-top: rem(36);
+
+
+    .about-header {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(55);
+        line-height: lh(55, 55);
+        text-align: center;
+        color: #17181C;
+        padding-bottom: rem(30);
+
+        @include xs {
+            font-size: rem(36);
+        }
+
+        @include md {
+            font-size: rem(45);
+        }
+
+        @include sm {
+            padding-top: rem(12);
+            font-size: rem(40);
+            transform: translateY(-25px);
+        }
+
+    }
+
+    .company-info-about {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+            padding-bottom: rem(60);
+        }
+
+        .company-images {
+            position: absolute;
+            width: 60%;
+            z-index: 1;
+
+            @media (max-width: 800px) {
+                transform: translateY(40px);
+            }
+
+
+            @include md {
+                transform: translateY(0);
+                width: 100%;
+                right: 22%;
+                z-index: -1;
+            }
+
+            @include sm {
+                display: none;
+            }
+
+            .company-ellipse {
+                top: -15px;
+                left: -150px;
+                position: absolute;
+                z-index: -1;
+
+                @include xl {
+                    display: none;
+                }
+            }
+
+            .company-couple {
+                position: absolute;
+                right: 0;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            .company-girl {
+                position: absolute;
+                left: 24%;
+
+                @include xl {
+                    display: none;
+                }
+
+                @include md {
+                    display: block;
+                    left: 0;
+                }
+            }
+
+            img {
+                position: absolute;
+            }
+
+        }
+
+        .company-service {
+            display: none;
+        }
+
+        .company-about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #F5F5F5;
+            width: 60%;
+            position: absolute;
+            z-index: 0;
+            right: 0%;
+            transform: translateY(23%);
+            padding: rem(50) rem(50) rem(56) rem(175);
+
+            @include xl {
+                transform: translateY(18%);
+                padding: rem(50) rem(50) rem(56) rem(115);
+            }
+
+            @include lg {
+                width: 70%;
+                padding: rem(50) rem(10) rem(56) rem(90);
+            }
+
+            @include md {
+                width: 70%;
+                height: 100%;
+                padding: rem(30);
+                height: auto;
+                z-index: 0;
+                transform: translateY(5%);
+            }
+
+            @include sm {
+                width: 100%;
+                padding: rem(30);
+                height: auto;
+                transform: translateY(-0px);
+            }
+
+            .leaf-img {
+                position: absolute;
+                right: -70px;
+                top: -50px;
+
+                @include xl {
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .about-title {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(24);
+                line-height: lh(36, 24);
+                color: #000;
+
+                @include sm {
+                    font-size: rem(19);
+                }
+            }
+
+            .about-text {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: rem(18);
+                line-height: lh(30, 18);
+                color: #17181C;
+
+                @include sm {
+                    font-size: rem(16);
+                }
+            }
+
+            .first-child {
+                padding: rem(34) 0;
+
+                @include sm {
+                    padding: rem(14) 0;
+                }
+            }
+
+            .about-link {
+                width: 100%;
+                text-align: center;
+                @include df-center;
+                padding-top: rem(25);
+
+                @include md {
+                    padding-top: rem(10);
+                }
+
+                p {
+                    width: 50%;
+                    font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: center;
+                    position: relative;
+                    z-index: 2000;
+                    text-align: center;
+                    padding: rem(8) rem(16);
+                    color: #7E6745;
+                    border: 1px solid #7E6745;
+
+                    @include xl{
+                        width: 60%;
+                    }
+
+                    @include md {
+                        width: 100%;
+                        padding: rem(8) rem(5);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .company-info-service {
+        display: flex;
+        justify-content: space-between;
+
+        .company-images {
+            position: absolute;
+            width: 60%;
+
+            @include sm {
+                display: none;
+            }
+
+            @include md {
+                width: 100%;
+                right: 22%;
+            }
+
+            .company-ellipse {
+                top: -8px;
+                left: -150px;
+                position: absolute;
+                z-index: -1;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            .company-couple {
+                position: absolute;
+                right: 12%;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            .company-girl {
+                position: absolute;
+                left: 10%;
+
+                @include xl {
+                    display: none;
+                }
+
+                @include md {
+                    display: block;
+                    left: 0;
+                }
+            }
+
+            img {
+                position: absolute;
+            }
+        }
+
+        .company-about {
+            display: none;
+        }
+
+        .company-service {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #F5F5F5;
+            width: 72%;
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            padding: rem(55) rem(25) rem(46) rem(184);
+
+            @include xl {
+                padding: rem(50) rem(50) rem(56) rem(115);
+            }
+
+            @include lg {
+                width: 70%;
+                padding: rem(50) rem(50) rem(56) rem(90);
+            }
+
+            @include md {
+                width: 70%;
+                height: 100%;
+                padding: rem(20);
+                height: auto;
+                z-index: 0;
+                transform: translateY(0px);
+            }
+
+            @include sm {
+                width: 100%;
+                height: 100%;
+                padding: rem(20);
+                height: auto;
+            }
+
+
+
+            .service-header {
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 600;
+                font-size: rem(55);
+                line-height: lh(55, 55);
+                color: #17181C;
+                padding-bottom: toEm(55, 55);
+
+                @include md {
+                    font-size: rem(40);
+                    padding-bottom: toEm(25, 40);
+
+                }
+
+                @include sm {
+                    font-size: rem(36);
+                    padding-bottom: toEm(15, 36);
+
+                }
+
+                @include xs {
+                    font-size: rem(26);
+                    padding-bottom: toEm(5, 26);
+
+                }
+            }
+
+            .service-items {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 30px;
+
+                @include md {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .service-info {
+                    display: flex;
+                    flex-direction: column;
+
+                    .service-columns {
+                        display: flex;
+                        justify-content: space-between;
+
+                        @include md {
+                            justify-content: start;
+                            align-items: flex-start;
+                        }
+
+                        .service-num {
+                            font-family: 'Playfair Display';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: rem(30);
+                            line-height: 55px;
+                            text-align: center;
+                            font-feature-settings: 'pnum' on, 'lnum' on;
+                            background: linear-gradient(113.09deg, rgba(255, 255, 255, 0.07) -15.73%, rgba(192, 101, 0, 0.49) 47.76%, rgba(228, 123, 0, 0.21) 95.11%, rgba(255, 255, 255, 0) 130.53%), linear-gradient(93.98deg, #FCF1B5 -17.56%, #FFBF31 107.31%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            text-fill-color: transparent;
+                            padding-right: rem(20);
+
+                            @include md {
+                                font-size: rem(22);
+                                padding-right: rem(10);
+                            }
+
+                        }
+
+                        .service-description {
+                            padding-top: rem(10);
+
+                            @include md {
+                                padding-top: rem(7);
+                            }
+
+                            .service-title {
+                                font-family: 'Fira Sans';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: rem(20);
+                                line-height: lh(36, 20);
+                                color: #000;
+
+                                @include md {
+                                    font-size: rem(20);
+                                    padding-right: rem(10);
+                                }
+                            }
+
+                            .service-text {
+                                font-family: 'Fira Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: rem(18);
+                                line-height: lh(30, 18);
+                                color: #000;
+
+                                @include md {
+                                    font-size: rem(16);
+                                    padding-right: rem(10);
+                                    line-height: lh(19, 16);
+
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}

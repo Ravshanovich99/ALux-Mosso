@@ -1,0 +1,65 @@
+.news-events {
+    padding: rem(47) 0 rem(13) 0;
+    background: #F9F9FB;
+
+    .container {
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(55, 55);
+            text-align: center;
+            color: #151515;
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .section-subtitle {
+            font-family: 'Fira Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(21);
+            line-height: lh(40, 21);
+            text-align: center;
+            color: #6F7478;
+            padding: toEm(12, 21) 0 toEm(40, 21);
+
+            @include md {
+                font-size: rem(19);
+            }
+
+            @include sm {
+                padding-top: rem(15);
+                font-size: rem(17);
+            }
+
+            @include xs {
+                font-size: rem(14);
+            }
+        }
+
+        .news-events-cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @include md{
+                justify-content: center;
+                gap: 30px;
+            }
+        }
+    }
+}

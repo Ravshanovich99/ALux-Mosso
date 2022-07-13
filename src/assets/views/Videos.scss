@@ -1,0 +1,141 @@
+.videos {
+    margin-top: rem(40);
+    padding: rem(33) 0 rem(57) 0;
+    background: #000;
+    color: #fff;
+    position: relative;
+
+    .videos-leaf-1{
+        position: absolute;
+        left: 124px;
+        top: 411px;
+
+        @media (max-width: 1500px) {
+            display: none;
+            
+        }
+    }
+
+    .videos-leaf-2{
+        position: absolute;
+        right: 0;
+        top: -159px;
+
+        @media (max-width: 1500px) {
+            display: none;
+        }
+    }
+
+    .container {
+
+        .section-title {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: rem(55);
+            line-height: lh(55, 55);
+            text-align: center;
+            color: #fff;
+
+            @include md {
+                font-size: rem(45);
+            }
+
+            @include sm {
+                font-size: rem(40);
+            }
+
+            @include xs {
+                font-size: rem(36);
+            }
+        }
+
+        .videos-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: rem(63);
+
+            @include md{
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .videos-card {
+                width: 31.8%;
+                display: flex;
+                flex-direction: column;
+
+                @include md{
+                    width: 47%
+                }
+
+                @include sm{
+                    width: 80%
+                }
+
+                .videos-img {
+                    @include df-center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 3px;
+                    }
+
+                    .videos-play-btn {
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        background: rgba(0, 0, 0, 0.3);
+                        border-radius: 50%;
+                        @include df-center;
+
+                        .videos-play {
+                            width: 70px;
+                            height: 70px;
+                            background: #000;
+                            border-radius: 50%;
+                            @include df-center;
+
+                            i {
+                                font-size: rem(28);
+                                color: #7E6745
+                            }
+                        }
+
+                    }
+                }
+
+                .videos-info {
+
+                    .videos-title {
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: rem(18);
+                        line-height: lh(30, 18);
+                        color: #fff;
+                        padding: toEm(18, 18) 0;
+                    }
+
+                    .videos-watch-count {
+                        font-family: 'Fira Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: rem(14);
+                        line-height: lh(30, 14);
+                        color: #BCBCBC;
+
+                        i {
+                            font-size: rem(18);
+                            padding-right: toEm(18, 18);
+                            color: #494949;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

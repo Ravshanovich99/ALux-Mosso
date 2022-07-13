@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Lato:wght@400;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+
+@import './helpers/fuctions';
+@import './helpers/normalize';
+@import './helpers/mixins';
+
+
+// Components
+
+@import './components/button.scss';
+@import './components/Header.scss';
+@import './components/Heart.scss';
+@import './components/ArrowBtn.scss';
+@import './components/CitiesCard.scss';
+@import './components/AboutCompany.scss';
+@import './components/ServicesLine.scss';
+@import './components/CategoriesCard.scss';
+@import './components/ReviewCard.scss';
+@import './components/NewsEventsCard.scss';
+@import './components/OptionalCard.scss';
+@import './components/Footer.scss';
+@import './components/Filter.scss';
+@import './components/WhyUs.scss';
+
+
+
+
+
+
+
+// Views 
+
+@import './views/Home.scss';
+@import './views/Objects.scss';
+@import './views/Cities.scss';
+@import './views/Categories.scss';
+@import './views/MainReviews.scss';
+@import './views/Videos.scss';
+@import './views/NewsEvents.scss';
+@import './views/OptionalBlock.scss';
+@import './views/Contacts.scss';
+@import './views/About.scss';
+@import './views/ObjectPage.scss';
+@import './views/Review.scss';
+@import './views/Reviews.scss';
+@import './views/FiltredObjects.scss';
+
+
+
+
