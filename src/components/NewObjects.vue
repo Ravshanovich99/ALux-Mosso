@@ -58,16 +58,10 @@
       <h2 class="price" v-if="this.$store.state.currency == 'price'">
         {{ item.price_from }} KZT - {{ item.price_to }} KZT
       </h2>
-      <h2
-        class="price"
-        v-if="this.$store.state.currency == 'price_dollar'"
-      >
+      <h2 class="price" v-if="this.$store.state.currency == 'price_dollar'">
         {{ item.price_dollar_from }} $ - {{ item.price_dollar_to }} $
       </h2>
-      <h2
-        class="price"
-        v-if="this.$store.state.currency == 'price_euro'"
-      >
+      <h2 class="price" v-if="this.$store.state.currency == 'price_euro'">
         {{ item.price_euro_from }} € -{{ item.price_euro_to }} €
       </h2>
     </div>
@@ -94,12 +88,14 @@ export default {
 
   async mounted() {
     try {
-      const { data } = await axios.get("https://mosso.a-lux.dev/api/objects", {
-        headers: {
-          "Accept-Language": localStorage.getItem("language"),
-        },
-      });
-      // console.log(data.data);
+      const { data } = await axios.get(
+        "https://mosso.a-lux.dev/api/objects?ids=11",
+        {
+          headers: {
+            "Accept-Language": localStorage.getItem("language"),
+          },
+        }
+      );
       this.objData = data.data;
       this.objData = this.objData.slice(0, this.objCount);
     } catch (e) {
